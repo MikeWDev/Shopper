@@ -4,6 +4,7 @@
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
   align-items: center;
+  position: relative;
 }
 .nav-logo {
   display: flex;
@@ -74,6 +75,7 @@
 }
 .navbar-dropdown {
   display: none;
+  font-size: 2.2rem;
 }
 @media (max-width: 1280px) {
   .navbar {
@@ -125,8 +127,8 @@
   }
   .navbar-dropdown {
     display: block;
-    width: 30px;
-    rotate: -90deg;
+
+    /* rotate: -90deg; */
     transition: 0.5s;
   }
   .nav-menu {
@@ -136,13 +138,13 @@
     position: absolute;
     background-color: white;
     justify-content: center;
-    top: 50px;
+    top: 100%;
   }
   .nav-menu-visible {
     display: flex;
   }
   .navbar-dropdown.open {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 }
 @media (max-width: 500px) {
