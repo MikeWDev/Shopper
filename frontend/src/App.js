@@ -10,7 +10,20 @@ import Footer from "./Components/Footer/Footer";
 import men_baner from "./Components/Assets/banner_mens.png";
 import women_banner from "./Components/Assets/banner_women.png";
 import kids_baner from "./Components/Assets/banner_kids.png";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 function App() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyBqDuB3LNiDbVF73wVs9ZJlcAgiwNFBmzI",
+    authDomain: "shopper-97a66.firebaseapp.com",
+    projectId: "shopper-97a66",
+    storageBucket: "shopper-97a66.appspot.com",
+    messagingSenderId: "213846033423",
+    appId: "1:213846033423:web:0fba41ebec42c43b080f7a",
+    measurementId: "G-1PTFZ69XY8",
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
   return (
     <>
       <BrowserRouter>
