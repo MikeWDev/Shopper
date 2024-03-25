@@ -120,7 +120,7 @@ app.post("/removeproduct", async (req, res) => {
 });
 
 // Creating api for getting all products
-app.get("/allproducts", async (req, res) => {
+app.get("/git ", async (req, res) => {
   let products = await Product.find({});
   console.log("All Products fetched ");
   res.send(products);

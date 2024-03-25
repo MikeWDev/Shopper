@@ -14,7 +14,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 function App() {
   const firebaseConfig = {
-    apiKey: "AIzaSyBqDuB3LNiDbVF73wVs9ZJlcAgiwNFBmzI",
+    apiKey: `${process.env.REACT_APP_FIREBASE_SECRET}`,
     authDomain: "shopper-97a66.firebaseapp.com",
     projectId: "shopper-97a66",
     storageBucket: "shopper-97a66.appspot.com",
