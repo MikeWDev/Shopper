@@ -62,6 +62,14 @@ const Navbar = () => {
           </Link>{" "}
           {menu === "kids" ? <hr /> : <></>}
         </li>
+        <li>
+          <div className="cart-con-sm">
+            <Link to="/cart">
+              <img className="cart-sm" src={cart_icon} alt="" />
+              <div className="nav-cart-count">{getTotalCartItems()}</div>
+            </Link>
+          </div>
+        </li>
       </ul>
       <div className="nav-login-cart">
         {localStorage.getItem("auth-token") ? (
@@ -79,10 +87,12 @@ const Navbar = () => {
           </Link>
         )}
 
-        <Link to="/cart">
-          <img src={cart_icon} alt="" />
-        </Link>
-        <div className="nav-cart-count">{getTotalCartItems()}</div>
+        <div className="cart-con">
+          <Link to="/cart">
+            <img src={cart_icon} alt="" />
+            <div className="nav-cart-count">{getTotalCartItems()}</div>
+          </Link>
+        </div>
       </div>
     </div>
   );

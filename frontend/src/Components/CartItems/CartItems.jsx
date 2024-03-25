@@ -9,34 +9,33 @@ const CartItems = () => {
   return (
     <div className="cartitems">
       <div className="cartitems-format-main">
-        <p>Products</p>
-        <p>Title</p>
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
-        <p>Remove</p>
+        <p>Products details</p>
       </div>
       <hr />
       {all_product.map((e) => {
         if (cartItems[e.id] > 0) {
           return (
-            <div>
+            <div key={e.id}>
               <div className="cartitems-format cartitems-format-main">
                 <img src={e.image} alt="" className="carticon-product-icon" />
-                <p>{e.name}</p>
-                <p>${e.new_price}</p>
-                <button className="cartitems-quantity">
-                  {cartItems[e.id]}
-                </button>
-                <p>${e.new_price * cartItems[e.id]}</p>
-                <img
-                  className="cartitems-remove-icon"
-                  src={remove_icon}
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                  alt=""
-                />
+                <div className="item-details">
+                  <p>{e.name}</p>
+                  <p>${e.new_price}</p>
+                  <button className="cartitems-quantity">
+                    {cartItems[e.id]}
+                  </button>
+                  <p>${e.new_price * cartItems[e.id]}</p>
+                  <div className="remove-icon">
+                    <img
+                      className="cartitems-remove-icon"
+                      src={remove_icon}
+                      onClick={() => {
+                        removeFromCart(e.id);
+                      }}
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
               <hr />
             </div>
@@ -46,7 +45,7 @@ const CartItems = () => {
       })}
       <div className="cartitems-down">
         <div className="cartitems-total">
-          <h1>cart Totals</h1>
+          <h1>Cart total</h1>
           <div>
             <div className="cartitems-total-item">
               <p>Subtotal</p>

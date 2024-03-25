@@ -60,22 +60,30 @@
 .nav-login-cart button:active {
   background-color: #f3f3f3;
 }
+.cart-con,
+.cart-con-sm {
+  position: relative;
+}
 .nav-cart-count {
   width: 22px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -35px;
-  margin-left: -55px;
   border-radius: 11px;
   font-size: 14px;
   background-color: red;
   color: white;
+  position: absolute;
+  top: -20%;
+  right: -20%;
 }
 .navbar-dropdown {
   display: none;
   font-size: 2.2rem;
+}
+.cart-con-sm {
+  display: none;
 }
 @media (max-width: 1280px) {
   .navbar {
@@ -161,5 +169,13 @@
   }
   .nav-login-cart {
     transform: scale(0.8);
+  }
+}
+@media (max-width: 350px) {
+  .cart-con {
+    display: none;
+  }
+  .cart-sm {
+    height: 30px;
   }
 }
