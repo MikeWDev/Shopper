@@ -14,12 +14,12 @@ import { getAnalytics } from "firebase/analytics";
 function App() {
   const firebaseConfig = {
     apiKey: `${process.env.REACT_APP_FIREBASE_SECRET}`,
-    authDomain: "shopper-97a66.firebaseapp.com",
-    projectId: "shopper-97a66",
-    storageBucket: "shopper-97a66.appspot.com",
-    messagingSenderId: "213846033423",
-    appId: "1:213846033423:web:0fba41ebec42c43b080f7a",
-    measurementId: "G-1PTFZ69XY8",
+    authDomain: "shopper-a6956.firebaseapp.com",
+    projectId: "shopper-a6956",
+    storageBucket: "shopper-a6956.appspot.com",
+    messagingSenderId: "1005565344035",
+    appId: "1:1005565344035:web:50a81fbb783c469918f496",
+    measurementId: "G-T2KY4CC7YM",
   };
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
