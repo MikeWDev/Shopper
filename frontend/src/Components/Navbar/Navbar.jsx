@@ -14,6 +14,7 @@ const Navbar = () => {
     menuRef.current.classList.toggle("nav-menu-visible");
     e.target.classList.toggle("open");
   };
+
   return (
     <div className="navbar">
       <div className="nav-logo">

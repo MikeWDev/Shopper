@@ -7,10 +7,11 @@ const LoginSingUp = () => {
     password: "",
     email: "",
   });
+  const baseUrl = process.env.REACT_APP_SERVER_URL;
   const login = async () => {
     console.log("Login function executed", formData);
     let responseData;
-    await fetch("http://localhost:4000/login", {
+    await fetch(`${baseUrl}/login`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -30,7 +31,7 @@ const LoginSingUp = () => {
   const singUp = async () => {
     console.log("Sign up function executed", formData);
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch(`${baseUrl}/signup`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",

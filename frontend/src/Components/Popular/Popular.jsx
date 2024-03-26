@@ -5,7 +5,8 @@ const Popular = () => {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/popularinwoman")
+    const baseUrl = process.env.REACT_APP_SERVER_URL;
+    fetch(`${baseUrl}/popularinwoman`)
       .then((res) => res.json())
       .then((data) => setPopularProducts(data));
   }, []);
